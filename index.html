@@ -10,22 +10,36 @@
 <body>
     <!-- ==================== NAVBAR ==================== -->
     <nav>
-        <div class="container">
-            <div class="logo">
-                <div class="logo-icon"></div>
-                <span>Ibrahima<strong class="logo-accent">AI</strong></span>
-            </div>
-            <ul>
-                <li><a href="#hero">Hero</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#skills">Compétences</a></li>
-            </ul>
-            <div class="nav-search">
-                <span>🔍</span>
-                <input type="search" id="site-search" placeholder="Rechercher sur le site...">
-            </div>
+      <div class="container">
+          <div class="logo">
+            <div class="logo-icon"></div>
+            <span>Ibrahima<strong class="logo-accent">AI</strong></span>
+          </div>
+        <!-- BOUTON BURGER (visible sur mobile) -->
+        <button class="nav-toggle" aria-label="Ouvrir le menu">
+          ☰
+        </button>
+
+        <!-- MENU PRINCIPAL -->
+        <ul id="nav-menu">
+          <li><a href="#hero">Hero</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Barre de recherche -->
+        <div class="nav-search">
+          <span>🔍</span>
+          <input
+            type="search"
+            id="site-search"
+            placeholder="Rechercher..."
+          >
         </div>
+      </div>
     </nav>
 
     <!-- ==================== HERO SECTION ==================== -->

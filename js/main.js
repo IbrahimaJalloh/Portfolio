@@ -112,4 +112,22 @@ if (searchInput) {
     });
 }
 
+// ==================== MENU BURGER MOBILE ====================
+const nav = document.querySelector("nav");
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+if (nav && navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    navMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("open");
+        });
+    });
+}
+
 
