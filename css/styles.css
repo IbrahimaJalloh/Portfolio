@@ -110,7 +110,12 @@ nav a:hover {
 
 @media (max-width: 768px) {
     nav ul {
-        display: none;
+        gap: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .nav-search {
+        display: none; /* on cache la recherche sur très petit écran */
     }
 }
 
@@ -880,4 +885,124 @@ footer {
     background: rgba(255, 255, 0, 0.4);
     padding: 0 2px;
     border-radius: 2px;
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 2.5rem 1.5rem;
+        /* Image recentrée, pas collée à gauche */
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr; /* une seule colonne */
+        gap: 2rem;
+    }
+
+    .hero-left h1 {
+        font-size: 2rem;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .quick-services {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0.75rem 1rem;
+    }
+
+    nav .container {
+        max-width: 100%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    /* Logo à gauche */
+    nav .logo {
+        margin-right: auto;
+        font-size: 1.1rem;
+    }
+
+    /* Menu toujours visible en petit */
+    nav ul {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    /* Barre de recherche petite à droite */
+    .nav-search {
+        padding: 0.25rem 0.5rem;
+        border-radius: 999px;
+        gap: 0.3rem;
+    }
+
+    .nav-search span {
+        font-size: 0.8rem;
+    }
+
+    .nav-search input {
+        width: 70px;          /* taille réduite */
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0.75rem 1rem;
+    }
+
+    nav .container {
+        max-width: 100%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    /* Logo à gauche */
+    nav .logo {
+        margin-right: auto;
+        font-size: 1.1rem;
+    }
+
+    /* Menu visible en petit */
+    nav ul {
+        display: flex !important;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    /* Barre de recherche : on FORCE l'affichage */
+    .nav-search {
+        display: flex !important;
+        align-items: center;
+        padding: 0.25rem 0.5rem;
+        border-radius: 999px;
+        gap: 0.3rem;
+    }
+
+    .nav-search span {
+        font-size: 0.8rem;
+    }
+
+    .nav-search input {
+        width: 70px;
+        font-size: 0.75rem;
+    }
 }
