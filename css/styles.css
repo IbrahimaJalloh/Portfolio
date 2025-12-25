@@ -981,11 +981,19 @@ footer {
         font-size: 1.1rem;
     }
 
-    /* Menu visible en petit */
+    /* Menu visible, scrollable gauche-droite */
     nav ul {
         display: flex !important;
-        gap: 0.5rem;
+        gap: 0.75rem;
         font-size: 0.8rem;
+        overflow-x: auto;        /* scroll horizontal */
+        white-space: nowrap;     /* pas de retour à la ligne */
+        padding-bottom: 0.25rem;
+        -webkit-overflow-scrolling: touch; /* scroll fluide mobile */
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;           /* barre de scroll invisible */
     }
 
     /* Barre de recherche : on FORCE l'affichage */
@@ -1006,3 +1014,4 @@ footer {
         font-size: 0.75rem;
     }
 }
+
