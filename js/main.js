@@ -8,11 +8,9 @@ document.querySelectorAll("[data-scroll]").forEach(btn => {
 
 // Form submission
 function handleFormSubmit(event) {
-//    event.preventDefault();
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
     alert(`Merci ${data.name}! Votre demande a été envoyée. Je vous répondrai sous 24 heures à ${data.email}`);
-//    event.target.reset();
 }
 
 const form = document.getElementById("contact-form");
