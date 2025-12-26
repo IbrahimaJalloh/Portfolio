@@ -1064,13 +1064,27 @@ footer {
 }
 
 /* Flèche desktop : vers le bas */
-.nav-arrow {
-  width: 0;
-  height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 6px solid var(--text);
+.nav-arrow-svg {
+  display: inline-flex;
+}
+
+.nav-arrow-svg svg {
   transition: transform 0.2s ease;
+}
+
+/* rotation quand ouvert */
+.nav-item.open > .nav-link-toggle .nav-arrow-svg svg {
+  transform: rotate(180deg);
+}
+
+/* mobile : flèche droite */
+@media (max-width: 1024px) {
+  .nav-arrow-svg svg {
+    transform: rotate(-90deg);
+  }
+  .nav-item.open > .nav-link-toggle .nav-arrow-svg svg {
+    transform: rotate(90deg);
+  }
 }
 
 /* Mega-menu desktop */
